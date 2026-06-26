@@ -8,6 +8,9 @@ const videojuegos = [
 ];
 
 const contenedor = document.getElementById("contenedor-juegos");
+const btnOrdenar = document.getElementById("btnOrdenar");
+
+let ordenAscendente = true;
 
 function mostrarJuegos() {
 
@@ -30,9 +33,17 @@ function mostrarJuegos() {
 
 mostrarJuegos();
 
-document.getElementById("btnOrdenar").addEventListener("click", function () {
+btnOrdenar.addEventListener("click", function () {
 
-    videojuegos.sort();
+    if (ordenAscendente) {
+        videojuegos.sort();
+        btnOrdenar.textContent = "Ordenar Z-A";
+    } else {
+        videojuegos.sort().reverse();
+        btnOrdenar.textContent = "Ordenar A-Z";
+    }
+
+    ordenAscendente = !ordenAscendente;
 
     mostrarJuegos();
 
