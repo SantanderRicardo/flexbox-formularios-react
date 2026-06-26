@@ -21,6 +21,7 @@ function mostrarJuegos() {
 
         tarjeta.innerHTML = `
             <h3>${juego}</h3>
+            <p>Entra al Top Juegos más Populares</p>
         `;
 
         contenedor.appendChild(tarjeta);
