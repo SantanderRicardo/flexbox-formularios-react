@@ -57,3 +57,11 @@ input {
     margin: 5px;
     padding: 5px;
 }
+
+form {
+    margin-bottom: 20px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
